@@ -23,7 +23,7 @@ const MyModal = ({
   title,
   okIcon,
   cancelIcon,
-  okText = "Submit",
+  okText = "SUBMIT",
   cancelText = "Cancel",
   submitHandler,
   cancelHandler,
