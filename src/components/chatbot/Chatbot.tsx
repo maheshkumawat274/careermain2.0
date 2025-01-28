@@ -1,9 +1,9 @@
 
+
 // import { TbSend } from "react-icons/tb";
 // import "./Chatbot.css"; // Custom CSS for animations
 // import { CSSTransition } from "react-transition-group";
 // import { useEffect, useState } from "react";
-
 // const Chatbot: React.FC = () => {
 //   const [isOpen, setIsOpen] = useState(false); // Chatbot body visibility
 //   const [showPopup, setShowPopup] = useState(true); // Auto-popup visibility
@@ -19,23 +19,18 @@
 //   ]);
 //   const [inputValue, setInputValue] = useState("");
 //   const [step, setStep] = useState(0);
-
 //   // Auto-hide popup after 10 seconds
 //   useEffect(() => {
 //     const timer = setTimeout(() => setShowPopup(false), 20000);
 //     return () => clearTimeout(timer);
 //   }, []);
-
 //   const toggleChat = () => {
 //     setIsOpen(!isOpen);
 //     setShowPopup(false); // Hide popup if chat is opened
 //   };
-
 //   const sendMessage = () => {
 //     if (!inputValue.trim()) return;
-
 //     setMessages((prev) => [...prev, { sender: "user", text: inputValue }]);
-
 //     if (step === 0) {
 //       setMessages((prev) => [
 //         ...prev,
@@ -74,10 +69,8 @@
 //       ]);
 //       setStep(4);
 //     }
-
 //     setInputValue("");
 //   };
-
 //   return (
 //     <div>
 //       {/* Auto-triggered Popup */}
@@ -101,7 +94,6 @@
 //           </button>
 //         </div>
 //       )}
-
 //       {/* Chat Icon */}
 //       <div
 //         className="fixed bottom-[70px] right-5 w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold cursor-pointer shadow-lg z-50 transition-transform transform hover:scale-110"
@@ -117,7 +109,6 @@
 //           </span>
 //         </div>
 //       </div>
-
 //       {/* Chatbot Body */}
 //       <CSSTransition in={isOpen} timeout={300} classNames="chatbot" unmountOnExit>
 //         <div className="fixed bottom-24 right-5 font-poppins w-full max-w-[90%] sm:max-w-[60%] md:max-w-[50%] lg:max-w-[20%] xl:max-w-[25%] bg-white/90 border border-gray-300 rounded-lg shadow-lg z-50">
@@ -135,7 +126,6 @@
 //               &times;
 //             </button>
 //           </div>
-
 //           {/* Chat Body */}
 //           <div className="h-64 overflow-y-auto px-4 py-2 bg-gray-50">
 //             {messages.map((message, index) => (
@@ -151,7 +141,6 @@
 //               </div>
 //             ))}
 //           </div>
-
 //           {/* Chat Footer */}
 //           {step < 4 && (
 //             <div className="flex items-center px-2 sm:px-4 py-2 bg-gray-100 rounded-b-lg">
@@ -176,7 +165,6 @@
 //     </div>
 //   );
 // };
-
 // export default Chatbot;
 
 import { TbSend } from "react-icons/tb";
@@ -200,6 +188,7 @@ const Chatbot: React.FC = () => {
   const [inputValue, setInputValue] = useState("");
   const [step, setStep] = useState(0);
   const chatBodyRef = useRef<HTMLDivElement | null>(null); // Ref for chat body
+
 
   // Auto-hide popup after 10 seconds
   useEffect(() => {
@@ -292,7 +281,7 @@ const Chatbot: React.FC = () => {
 
       {/* Chat Icon */}
       <div
-        className="fixed bottom-[70px] right-5 w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold cursor-pointer shadow-lg z-50 transition-transform transform hover:scale-110"
+        className="fixed bottom-[120px] right-3 w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold cursor-pointer shadow-lg z-50 transition-transform transform hover:scale-110"
         onClick={toggleChat}
       >
         <div className="relative">
